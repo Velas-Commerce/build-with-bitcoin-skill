@@ -34,7 +34,7 @@ For each scenario, check the conversation flow and the final brief against the c
 
 **Check in the brief:**
 
-- [ ] Routes to "Add Bitcoin to Your Business"
+- [ ] Brief content matches "Add Bitcoin to Your Business" — recommends payment tools, references btcmap.org, no stack or testnet discussion
 - [ ] Recommends Square as the lowest-friction path (if user signals openness to switching and is in the USA)
 - [ ] Mentions that Square settles in USD by default
 - [ ] Includes btcmap.org reference
@@ -173,7 +173,7 @@ For each scenario, check the conversation flow and the final brief against the c
 
 **Check in the brief:**
 
-- [ ] Routes to "Build a Product on Bitcoin"
+- [ ] Brief content matches "Build a Product on Bitcoin" — recommends a tech stack (LDK/LND/L402), includes testnet recommendation, no payment POS tools
 - [ ] Recommends Lightning (LDK or LND), L402 for pay-per-use
 - [ ] Mentions Voltage for managed Lightning nodes
 - [ ] Includes a testnet recommendation (likely MutinyNet for Lightning)
@@ -202,7 +202,7 @@ For each scenario, check the conversation flow and the final brief against the c
 
 **Check in the brief:**
 
-- [ ] Routes to "Build Bitcoin Infrastructure"
+- [ ] Brief content matches "Build Bitcoin Infrastructure" — discusses protocol-level stack, recommends Regtest, no payment tools or product-layer recommendations
 - [ ] Mentions Fedimint as a relevant reference
 - [ ] Recommends starting on Regtest
 - [ ] Discusses protocol-level stack (rust-bitcoin, BDK, LDK)
@@ -304,7 +304,7 @@ For each scenario, check the conversation flow and the final brief against the c
 
 **Check in the brief:**
 
-- [ ] Routes to "Build a Product on Bitcoin" or "Build Bitcoin Infrastructure" depending on scope
+- [ ] Brief content matches "Build a Product on Bitcoin" or "Build Bitcoin Infrastructure" — goes deep on stack, includes testnet, no payment tools
 - [ ] Goes deep on stack trade-offs (e.g., LND vs LDK, rebalancing strategies)
 - [ ] Testnet recommendation is Regtest or Signet — not a basic explanation of what testnets are
 
