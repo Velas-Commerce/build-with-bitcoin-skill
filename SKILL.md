@@ -114,7 +114,7 @@ After discovery, produce a **Bitcoin Project Brief** using the template for thei
 
 **Recommended approach**
 
-[Route primarily on holding preference, then location and setup tolerance. Pick the right tool from the Payment Tools Reference below — do not list everything, just what fits them and why.]
+[Route primarily on holding preference, then location and setup tolerance. Read blocks/tools-payment.md for full tool details — do not describe tools from memory. Pick what fits them and explain why — do not list everything.]
 
 _If they want to convert all Bitcoin to fiat automatically:_
 Square (US, lowest friction) or Wallet of Satoshi — both handle settlement and require minimal setup. Strike or OpenNode for online/e-commerce.
@@ -123,7 +123,7 @@ _If they want to hold all Bitcoin they receive:_
 Do not default to one option. Present the three self-custodial choices briefly and ask which fits best:
 
 - **Breez** — Lightning POS app for any phone or tablet they already have. ~15 min setup.
-- **Wallet of Satoshi** — Lightning POS app for any phone or tablet they already have. ~15 min setup. Extra simple setup.
+- **Wallet of Satoshi** — Two-app setup: user downloads the WOS wallet app on their personal phone, then downloads the WOS POS app on the counter device. WOS POS is receive-only and is configured to send payments to the WOS wallet. ~15 min setup. Extra simple.
 - **Bitcoinize** — dedicated Bitcoin POS hardware, a proper physical till. Good if they want a device that does one thing only.
 - **BTCPay Server** — most control and flexibility, but more setup. Best if they're technical or want to run in-person and online from one system.
   Ask: "Do you want to use devices you already have, get dedicated hardware, or have full control of the whole stack?"
@@ -131,7 +131,7 @@ Do not default to one option. Present the three self-custodial choices briefly a
 _If they want to keep a percentage:_
 BTCPay Server is the most flexible here. A two-tool setup also works — e.g., Breez for the portion they hold and a fiat-settling option for the rest.
 
-_If they are in the US and open to switching to Square:_
+_If they are in the US (50 states only — Square is not available in Puerto Rico or other US territories) and open to switching to Square:_
 Square's Bitcoin acceptance is built into their latest terminals — no extra hardware, settles in USD by default, zero additional configuration. Lowest-friction path for a US operator.
 
 _If they want dedicated hardware rather than a phone or tablet:_
@@ -184,7 +184,7 @@ The first step in building a project like this is to get a working setup in fron
 [Add a sentence on what their team will need to learn or hire for.]
 
 **Recommended testnet**
-[Match to their project type — see Testnet Guide below.]
+[Read blocks/testnet-guide.md and match to their project type and stage.]
 
 **Things to watch out for**
 
@@ -223,7 +223,7 @@ The first step in building a project like this is to build a prototype — a thi
 [Add a note on team requirements — this level of work typically needs Bitcoin protocol expertise.]
 
 **Recommended testnet**
-[Match to their project type — see Testnet Guide below. Infrastructure work almost always starts on Regtest.]
+[Read blocks/testnet-guide.md. Infrastructure work almost always starts on Regtest.]
 
 **Things to watch out for**
 
@@ -235,34 +235,12 @@ The first step in building a project like this is to build a prototype — even 
 
 ---
 
-## Payment Tools Reference
+## Reference Files
 
-Use this table when recommending Bitcoin payment tools. Match to the user's holding preference, location, and setup tolerance. Do not describe a tool's capabilities from memory — use these descriptions.
+Read these files when you need detailed reference material. Do not rely on memory for tool capabilities or testnet details.
 
-| Tool                  | Custody                                                       | Fiat settlement     | Best for                                                                                                                                                                               |
-| --------------------- | ------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Square**            | Custodial                                                     | Auto (USD)          | US operators who want plug-and-play. Bitcoin built into latest terminals, no extra hardware.                                                                                           |
-| **Wallet of Satoshi** | Self-custodial (default in US); custodial mode also available | Auto available      | Simplest possible setup. Full POS mode at walletofsatoshi.com/pos. US users are on self-custody by default; users in other regions can switch self-custody on at any time in settings. |
-| **Breez**             | Self-custodial                                                | No                  | Operators who want to hold BTC. Lightning POS app, runs on any phone or tablet, ~15 min setup.                                                                                         |
-| **Bitcoinize**        | Self-custodial                                                | No                  | Operators who want dedicated hardware. Purpose-built Bitcoin POS till. bitcoinize.com                                                                                                  |
-| **BTCPay Server**     | Self-custodial                                                | Optional via plugin | Outside US, experimental, technical, or hold-all operators. Open source, self-hosted, in-person POS + online checkout. Wallet setup: docs.btcpayserver.org/WalletSetup/                |
-| **Strike**            | Custodial                                                     | Auto available      | Online/e-commerce with fiat settlement. API-based, better for developer-driven integrations.                                                                                           |
-| **OpenNode**          | Custodial                                                     | Auto available      | Online/e-commerce. Hosted processor with easy checkout widget.                                                                                                                         |
-
----
-
-## Testnet Guide
-
-When the user's project involves writing code (Build a Product on Bitcoin, or Build Bitcoin Infrastructure), recommend the appropriate test environment:
-
-| Their situation                                                  | Recommend                                                                     |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Early prototype, just getting started, full local control needed | **Regtest** — local Bitcoin network, instant blocks, no outside dependencies  |
-| Ready to test integrations with other tools or services          | **Signet** — stable public testnet, predictable block times, widely supported |
-| Wants realistic network conditions for pre-launch testing        | **Testnet4** — decentralised public testnet, closest to mainnet behaviour     |
-| Building on Lightning specifically                               | **MutinyNet** — a managed Signet tuned for Lightning development              |
-
-Only mention testnets if it's relevant to their current stage. Don't overwhelm a founder who is still at the idea stage.
+- **blocks/tools-payment.md** — Full details on every payment tool: custody model, fiat settlement, geography, setup complexity, and when to recommend each. Read this before recommending any payment tool.
+- **blocks/testnet-guide.md** — Testnet options with setup guidance and trade-offs. Read this when recommending a test environment for a coding project. Skip for non-technical users on hosted tools.
 
 ---
 
