@@ -52,12 +52,17 @@ Start with a warm, single opening message. Do not ask all questions at once. Ask
 10. Do you want to keep the Bitcoin you receive, convert it all automatically to your local currency, or something in between — like keeping a percentage?
 11. For the Bitcoin payment setup itself — are you planning to use phones or tablets you already have, or would you consider a dedicated device just for Bitcoin payments?
 
+**If the use case is building a product on Bitcoin, also ask:**
+
+12. Who is your target user — people already familiar with Bitcoin and Lightning, or the general public?
+
 **Inference rules:**
 
 - You do not need to ask all questions if the answers are clear from context. Infer where you can.
 - If the user gives a rich description upfront, jump straight to a clarifying question on the one thing you still need.
 - If the user has no idea yet (no project in mind), switch to brainstorm mode — see Edge Cases below.
 - Aim for 3–5 exchanges before moving to the output. Do not drag it out.
+- During discovery and brainstorming, do not suggest specific tech stacks, libraries, frameworks, or infrastructure. Orient around what they are building and who it is for. Save all stack recommendations for the Project Brief.
 
 ---
 
@@ -174,14 +179,14 @@ The first step in building a project like this is to get a working setup in fron
 - [Example 3]
 
 **Recommended stack**
-[Match to their specific use case:]
+[Match to their specific use case. Cover Bitcoin/Lightning components only — do not recommend web frameworks, databases, frontend libraries, or cloud providers. Those choices belong to the builder.]
 
 - **Lightning payments/infrastructure:** Lightning Development Kit (LDK) for custom implementations, or LND / Core Lightning if they want a production node. Voltage for managed Lightning nodes.
 - **Taproot Assets:** Taproot Assets daemon (from Lightning Labs) — issue and transfer assets on Bitcoin/Lightning
 - **L402 / pay-per-use:** L402 middleware libraries (Go, Node.js) — machine-to-machine micropayments, API monetisation
-- **Wallet / key management:** Bitcoin Dev Kit (BDK), Lightning Development Kit (LDK), or Breez SDK for custom wallet functionality
+- **Wallet / key management:** Read blocks/user-wallets.md — covers self-custodial embedded wallets (Breez SDK Spark/Liquid), federated e-cash (Fedimint, Cashu), and user-connected options (NWC, LNURL). Match to their custody preference and payment size.
 
-[Add a sentence on what their team will need to learn or hire for.]
+[Add a sentence on what their team will need to learn or hire for on the Bitcoin side specifically.]
 
 **Recommended testnet**
 [Read blocks/testnet-guide.md and match to their project type and stage.]
@@ -213,14 +218,14 @@ The first step in building a project like this is to build a prototype — a thi
 - [Example 3]
 
 **Recommended stack**
-[Match to their specific infrastructure layer:]
+[Match to their specific infrastructure layer. Cover Bitcoin/Lightning components only — do not recommend web frameworks, databases, frontend libraries, or cloud providers. Those choices belong to the builder.]
 
 - **Protocol / base layer:** Bitcoin Core, rust-bitcoin, or bitcoindevkit (BDK) depending on scope
 - **Lightning layer:** LDK (most flexible for custom implementations), LND or Core Lightning for production nodes
 - **Financial infrastructure:** Fedimint (federated custody), Cashu (ecash / token systems)
 - **Interoperability / assets:** Taproot Assets daemon
 
-[Add a note on team requirements — this level of work typically needs Bitcoin protocol expertise.]
+[Add a note on team requirements — this level of work typically needs Bitcoin protocol expertise. Stay focused on what they need to know on the Bitcoin side.]
 
 **Recommended testnet**
 [Read blocks/testnet-guide.md. Infrastructure work almost always starts on Regtest.]
@@ -241,6 +246,7 @@ Read these files when you need detailed reference material. Do not rely on memor
 
 - **blocks/tools-payment.md** — Full details on every payment tool: custody model, fiat settlement, geography, setup complexity, and when to recommend each. Read this before recommending any payment tool.
 - **blocks/testnet-guide.md** — Testnet options with setup guidance and trade-offs. Read this when recommending a test environment for a coding project. Skip for non-technical users on hosted tools.
+- **blocks/user-wallets.md** — Wallet architecture options for "Build a Product on Bitcoin" use cases: self-custodial embedded wallets (Breez SDK Spark/Liquid), federated e-cash (Fedimint, Cashu), and user-connected options (NWC, LNURL). Read this when a product builder asks how to provision wallets for their users. Do not recommend Greenlight — it is outdated.
 
 ---
 
