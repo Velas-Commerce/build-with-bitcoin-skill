@@ -61,12 +61,15 @@ Use this file when a "Build a Product on Bitcoin" user needs to provision Lightn
 
 ## Federated / e-cash options
 
+**Default: recommend existing public mints.** Do not suggest the builder run their own Fedimint or Cashu mint unless they specifically ask or have a clear reason to (e.g. custom federation, specific privacy requirements). Running a mint adds infrastructure and custody responsibility. Pointing users to existing mints is simpler, faster, and punts the custody question to an established operator.
+
 ### Fedimint
 
 - **Custody:** Federated (trust-minimised, distributed across guardians — not a single custodian)
 - **Best for:** Community or creator platforms where privacy and distributed trust matter.
 - **How it works:** A federation of operators (typically 3–5 guardians) runs a mint. Users hold e-cash tokens redeemable for Bitcoin/Lightning. No single operator controls all funds.
-- **Hosting:** The builder does not need to run their own Fedimint. Existing public mints are available — users can onboard to one without the platform running any mint infrastructure.
+- **Default recommendation:** Use an existing public Fedimint. The builder does not need to run their own.
+- **When to recommend self-hosted:** Only if they have a specific reason — custom federation members, regulatory requirements, or they explicitly want to operate the mint.
 - **When to recommend:** Privacy is a feature (anonymous payments, creator anonymity). Community savings, group treasury, or circular economy use cases.
 - **Notes:** Technically custodial at the federation level, but distributed and trust-minimised. Be clear with users about this distinction.
 
@@ -75,7 +78,8 @@ Use this file when a "Build a Product on Bitcoin" user needs to provision Lightn
 - **Custody:** Custodial at the mint operator level
 - **Best for:** Simple e-cash use cases, lightweight token systems, or internal platform credits.
 - **How it works:** A mint issues bearer tokens. Users spend them like digital cash — fast and private.
-- **Hosting:** Like Fedimint, users can use existing public Cashu mints. The builder doesn't need to operate one.
+- **Default recommendation:** Use an existing public Cashu mint. The builder does not need to operate one.
+- **When to recommend self-hosted:** Only if they need control over the mint (e.g. custom token logic, specific trust model).
 - **When to recommend:** Simpler than Fedimint, lower trust guarantees. Good for prototyping or reward/credit systems where privacy matters but federation is overkill.
 - **Notes:** The mint operator is a single trust point. Be transparent with users about this.
 
