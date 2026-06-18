@@ -20,7 +20,7 @@ Use this file when a "Build a Product on Bitcoin" user needs to provision Lightn
 
 ## MVP / custodial options (ship fast, validate demand)
 
-### LNBits on Voltage
+### LNBits
 
 - **Custody:** Custodial (platform holds user funds)
 - **Best for:** MVPs and proof-of-concept builds. Get a working multitenant Lightning wallet system in front of users with minimal setup.
