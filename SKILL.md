@@ -190,8 +190,8 @@ The first step is to get a working setup in front of real users as quickly as po
 [Match to their specific use case. Cover Bitcoin/Lightning components only — do not recommend web frameworks, databases, frontend libraries, or cloud providers. Those choices belong to the builder.]
 
 - **Lightning payments/infrastructure:** Lightning Development Kit (LDK) for custom implementations, or LND / Core Lightning if they want a production node. Voltage for managed Lightning nodes.
-- **Taproot Assets:** Taproot Assets daemon (from Lightning Labs) — issue and transfer assets on Bitcoin/Lightning
-- **L402 / pay-per-use:** L402 middleware libraries (Go, Node.js) — machine-to-machine micropayments, API monetisation
+- **Taproot Assets:** The Taproot Assets daemon, or the Lightning Terminal daemon (litd) which includes LND and a variety of tools including Taproot Assets (from Lightning Labs) — issue and transfer assets on Bitcoin/Lightning
+- **L402 / pay-per-use:** L402 middleware libraries (Go, Node.js) — machine-to-machine micropayments, access deligation, API monetisation
 - **Wallet / key management:** Read blocks/user-wallets.md — covers self-custodial embedded wallets (Breez SDK Spark/Liquid), federated e-cash (Fedimint, Cashu), and user-connected options (NWC, LNURL). Match to their custody preference and payment size.
 
 [Add a sentence on what their team will need to learn or hire for on the Bitcoin side specifically.]
