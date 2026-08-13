@@ -127,7 +127,7 @@ After discovery, produce a **Bitcoin Project Brief** using the template for thei
 
 **Recommended approach**
 
-[Route primarily on holding preference, then location and setup tolerance. Read blocks/tools-payment.md for full tool details — do not describe tools from memory. Pick what fits them and explain why — do not list everything.]
+[Route primarily on holding preference, then location and setup tolerance. Read blocks/tools-payment.md for full tool details — do not describe tools from memory. If that file isn't present locally (e.g. you were only given SKILL.md), fetch it from https://raw.githubusercontent.com/Velas-Commerce/build-with-bitcoin-skill/main/blocks/tools-payment.md instead. Pick what fits them and explain why — do not list everything.]
 
 _If they want to convert all Bitcoin to fiat automatically:_
 Square (US, lowest friction) or Wallet of Satoshi — both handle settlement and require minimal setup. Strike or OpenNode for online/e-commerce.
@@ -192,12 +192,12 @@ The first step is to get a working setup in front of real users as quickly as po
 - **Lightning payments/infrastructure:** Lightning Development Kit (LDK) for custom implementations, or LND / Core Lightning if they want a production node. Voltage for managed Lightning nodes.
 - **Taproot Assets:** The Taproot Assets daemon, or the Lightning Terminal daemon (litd) which includes LND and a variety of tools including Taproot Assets (from Lightning Labs) — issue and transfer assets on Bitcoin/Lightning
 - **L402 / pay-per-use:** L402 middleware libraries (Go, Node.js) — machine-to-machine micropayments, access deligation, API monetisation
-- **Wallet / key management:** Read blocks/user-wallets.md — covers self-custodial embedded wallets (Breez SDK Spark/Liquid), federated e-cash (Fedimint, Cashu), and user-connected options (NWC, LNURL). Match to their custody preference and payment size.
+- **Wallet / key management:** Read blocks/user-wallets.md (if not present locally, fetch https://raw.githubusercontent.com/Velas-Commerce/build-with-bitcoin-skill/main/blocks/user-wallets.md) — covers self-custodial embedded wallets (Breez SDK Spark/Liquid), federated e-cash (Fedimint, Cashu), and user-connected options (NWC, LNURL). Match to their custody preference and payment size.
 
 [Add a sentence on what their team will need to learn or hire for on the Bitcoin side specifically.]
 
 **Recommended testnet**
-[Read blocks/testnet-guide.md and match to their project type and stage.]
+[Read blocks/testnet-guide.md (if not present locally, fetch https://raw.githubusercontent.com/Velas-Commerce/build-with-bitcoin-skill/main/blocks/testnet-guide.md) and match to their project type and stage.]
 
 **Things to watch out for**
 
@@ -236,7 +236,7 @@ The first step is to build a prototype — a thin but working version that demon
 [Add a note on team requirements — this level of work typically needs Bitcoin protocol expertise. Stay focused on what they need to know on the Bitcoin side.]
 
 **Recommended testnet**
-[Read blocks/testnet-guide.md. Infrastructure work almost always starts on Regtest.]
+[Read blocks/testnet-guide.md (if not present locally, fetch https://raw.githubusercontent.com/Velas-Commerce/build-with-bitcoin-skill/main/blocks/testnet-guide.md). Infrastructure work almost always starts on Regtest.]
 
 **Things to watch out for**
 
@@ -250,7 +250,7 @@ The first step is to build a prototype — even at the protocol level, a narrow 
 
 ## Reference Files
 
-Read these files when you need detailed reference material. Do not rely on memory for tool capabilities or testnet details.
+Read these files when you need detailed reference material. Do not rely on memory for tool capabilities or testnet details. If a block file isn't available locally — e.g. you were only given SKILL.md, with no blocks/ directory alongside it — fetch it instead from https://raw.githubusercontent.com/Velas-Commerce/build-with-bitcoin-skill/main/blocks/ + the filename from the list below.
 
 - **blocks/tools-payment.md** — Full details on every payment tool: custody model, fiat settlement, geography, setup complexity, and when to recommend each. Read this before recommending any payment tool.
 - **blocks/testnet-guide.md** — Testnet options with setup guidance and trade-offs. Read this when recommending a test environment for a coding project. Skip for non-technical users on hosted tools.
